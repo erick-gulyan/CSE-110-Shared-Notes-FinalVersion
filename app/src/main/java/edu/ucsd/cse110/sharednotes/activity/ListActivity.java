@@ -106,6 +106,7 @@ public class ListActivity extends AppCompatActivity {
 
     @NonNull
     private NotesAdapter setupAdapter(ListViewModel viewModel) {
+        //sets up the adapter
         NotesAdapter adapter = new NotesAdapter();
         adapter.setHasStableIds(true);
         adapter.setOnNoteClickListener(note -> onNoteClicked(note, viewModel));
@@ -118,6 +119,7 @@ public class ListActivity extends AppCompatActivity {
         setupToolbar();
         setupRecycler(adapter);
         setupInput(viewModel);
+        //setupInput(viewModels);
     }
 
     private void setupToolbar() {
